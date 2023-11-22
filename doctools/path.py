@@ -4,8 +4,7 @@ import os
 import pathlib
 
 try:
-    REPO_ROOT_DIR = pathlib.Path(
-        os.environ["DOCTOOLS_MD_REPO_ROOT"]).absolute()
+    REPO_ROOT_DIR = pathlib.Path(os.environ["DOCTOOLS_MD_REPO_ROOT"]).absolute()
 except KeyError as error:
     print(f"env variable {error.args[0]!r} not set. Exiting...")
     raise SystemExit

@@ -6,7 +6,7 @@ import pathlib
 import tempfile
 import subprocess as sp
 
-from .path import PANDOC_YML_METADATA_FILE, PANDOC_TEX_HEADER_FILE
+from .path import CONTENTS_DIR, PANDOC_YML_METADATA_FILE, PANDOC_TEX_HEADER_FILE
 from fzf_but_typed.lib import FuzzyFinderBuilder, ScriptingOptions
 
 
@@ -16,16 +16,17 @@ def find_mdpp() -> str:
         check=True,
         text=True,
         stdout=sp.PIPE,
+        cwd=CONTENTS_DIR,
     ).stdout
 
 
 def cli(input_mdpp: str | None = None) -> None:
     if input_mdpp is None:
-        input_mdpp = FuzzyFinderBuilder(scripting=ScriptingOptions(read0=True)).build().run(
-            find_mdpp(), check=True).output[0]
+        mdpp_path = CONTENTS_DIR / FuzzyFinderBuilder(scripting=ScriptingOptions(
+            read0=True)).build().run(find_mdpp(), check=True).output[0]
     else:
         assert input_mdpp.endswith('.mdpp'), "Invalid input file"
-    mdpp_path = pathlib.Path(input_mdpp).absolute()
+        mdpp_path = pathlib.Path(input_mdpp).absolute()
 
     with tempfile.NamedTemporaryFile() as dst_md:
         mdpp_cmd = [
