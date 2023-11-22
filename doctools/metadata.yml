@@ -1,0 +1,34 @@
+author: Bruno Vinícius Fauth
+
+documentclass: report
+lang: pt-BR
+
+top-level-division: chapter
+numbersections: true
+
+toc: true
+toc-depth: 6
+
+title: Título
+pagestyle: headings
+papersize: a4
+toc-title: Índice
+
+# geometry:
+#   - margin=1cm
+#   - includehead
+#   - includefoot
+# classoption:
+#   - twocolumn
+
+### fonts are now set in 'header.tex'
+#
+# mainfont: NimbusRoman-Regular
+# mainfontoptions:
+#   - BoldFont=NimbusRoman-Bold
+#   - ItalicFont=NimbusRoman-Italic
+#   - BoldItalicFont=NimbusRoman-BoldItalic
+# sansfont: NimbusSans-Regular
+# monofont: NimbusMonoPs-Regular
+# mathfont: texgyredejavu-math
+

@@ -1,0 +1,82 @@
+\usepackage{combofont}
+
+\setupcombofont{lmroman-nimbus-regular}{
+  {LMRoman10-Regular:\combodefaultfeat} at #1pt,
+  {times:\combodefaultfeat} at #1pt,
+  {NimbusRoman-Regular:\combodefaultfeat} at #1pt
+}{ {}, fallback, fallback }
+\setupcombofont{lmroman-nimbus-bold}{
+  {LMRoman10-Bold:\combodefaultfeat} at #1pt,
+  {timesbd:\combodefaultfeat} at #1pt,
+  {NimbusRoman-Bold:\combodefaultfeat} at #1pt
+}{ {}, fallback, fallback }
+\setupcombofont{lmroman-nimbus-italic}{
+  {LMRoman10-Italic:\combodefaultfeat} at #1pt,
+  {timesi:\combodefaultfeat} at #1pt,
+  {NimbusRoman-Italic:\combodefaultfeat} at #1pt
+}{ {}, fallback, fallback }
+\setupcombofont{lmroman-nimbus-bolditalic}{
+  {LMRoman10-BoldItalic:\combodefaultfeat} at #1pt,
+  {timesbi:\combodefaultfeat} at #1pt,
+  {NimbusRoman-BoldItalic:\combodefaultfeat} at #1pt
+}{ {}, fallback, fallback }
+
+% Now set up the family
+\DeclareFontFamily{TU}{lmroman-nimbus}{}
+\DeclareFontShape{TU}{lmroman-nimbus}{m}{n} {<->combo*lmroman-nimbus-regular}{}
+\DeclareFontShape{TU}{lmroman-nimbus}{bx}{n} {<->combo*lmroman-nimbus-bold}{}
+\DeclareFontShape{TU}{lmroman-nimbus}{m}{it} {<->combo*lmroman-nimbus-italic}{}
+\DeclareFontShape{TU}{lmroman-nimbus}{bx}{it} {<->combo*lmroman-nimbus-bolditalic}{}
+
+\setupcombofont{lmsans-nimbus-regular}{
+  {LMSans10-Regular:\combodefaultfeat} at #1pt,
+  {NimbusSans-Regular:\combodefaultfeat} at #1pt
+}{ {}, fallback }
+\setupcombofont{lmsans-nimbus-bold}{
+  {LMSans10-Bold:\combodefaultfeat} at #1pt,
+  {NimbusSans-Bold:\combodefaultfeat} at #1pt
+}{ {}, fallback }
+\setupcombofont{lmsans-nimbus-italic}{
+  {LMSans10-Italic:\combodefaultfeat} at #1pt,
+  {NimbusSans-Italic:\combodefaultfeat} at #1pt
+}{ {}, fallback }
+\setupcombofont{lmsans-nimbus-bolditalic}{
+  {LMSans10-BoldItalic:\combodefaultfeat} at #1pt,
+  {NimbusSans-BoldItalic:\combodefaultfeat} at #1pt
+}{ {}, fallback }
+
+% Now set up the family
+\DeclareFontFamily{TU}{lmsans-nimbus}{}
+\DeclareFontShape{TU}{lmsans-nimbus}{m}{n} {<->combo*lmsans-nimbus-regular}{}
+\DeclareFontShape{TU}{lmsans-nimbus}{bx}{n} {<->combo*lmsans-nimbus-bold}{}
+\DeclareFontShape{TU}{lmsans-nimbus}{m}{it} {<->combo*lmsans-nimbus-italic}{}
+\DeclareFontShape{TU}{lmsans-nimbus}{bx}{it} {<->combo*lmsans-nimbus-bolditalic}{}
+
+\setupcombofont{lmmono-nimbus-regular}{
+  {LMMono10-Regular:\combodefaultfeat} at #1pt,
+  {NimbusMono-Regular:\combodefaultfeat} at #1pt
+}{ {}, fallback }
+\setupcombofont{lmmono-nimbus-bold}{
+  {LMMono10-Bold:\combodefaultfeat} at #1pt,
+  {NimbusMono-Bold:\combodefaultfeat} at #1pt
+}{ {}, fallback }
+\setupcombofont{lmmono-nimbus-italic}{
+  {LMMono10-Italic:\combodefaultfeat} at #1pt,
+  {NimbusMono-Italic:\combodefaultfeat} at #1pt
+}{ {}, fallback }
+\setupcombofont{lmmono-nimbus-bolditalic}{
+  {LMMono10-BoldItalic:\combodefaultfeat} at #1pt,
+  {NimbusMono-BoldItalic:\combodefaultfeat} at #1pt
+}{ {}, fallback }
+
+% Now set up the family
+\DeclareFontFamily{TU}{lmmono-nimbus}{}
+\DeclareFontShape{TU}{lmmono-nimbus}{m}{n} {<->combo*lmmono-nimbus-regular}{}
+\DeclareFontShape{TU}{lmmono-nimbus}{bx}{n} {<->combo*lmmono-nimbus-bold}{}
+\DeclareFontShape{TU}{lmmono-nimbus}{m}{it} {<->combo*lmmono-nimbus-italic}{}
+\DeclareFontShape{TU}{lmmono-nimbus}{bx}{it} {<->combo*lmmono-nimbus-bolditalic}{}
+
+\renewcommand{\rmdefault}{lmroman-nimbus}
+\renewcommand{\sfdefault}{lmsans-nimbus}
+\renewcommand{\ttdefault}{lmmono-nimbus}
+% \setmainfont{lmroman-nimbus}
