@@ -76,9 +76,9 @@ def cli(
         files = FuzzyFinderBuilder(
             scripting=ScriptingOptions(read0=True),
             interface=InterfaceOptions(bind=[
-                Binding(key=Key.CTRL_A, action=ActionSimple.SELECT_ALL),
-                Binding(key=Key.ENTER, action=ActionSimple.ACCEPT_NON_EMPTY),
-                Binding(key=Key.ESC, action=ActionSimple.CANCEL),
+                Binding(binding=Key.CTRL_A, action=ActionSimple.SELECT_ALL),
+                Binding(binding=Key.ENTER, action=ActionSimple.ACCEPT_NON_EMPTY),
+                Binding(binding=Key.ESC, action=ActionSimple.CANCEL),
             ])).build().run(discover_md_files(), check=True).output
 
     file_paths = [pathlib.Path(file).absolute() for file in files if file.endswith(".md")]
